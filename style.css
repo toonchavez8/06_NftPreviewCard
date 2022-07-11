@@ -21,7 +21,7 @@
   --fw-bold: 600;
 
   /* Border radius */
-    --br-small: 0.8rem;
+  --br-small: 0.8rem;
 }
 
 /* Remove default margin */
@@ -35,24 +35,24 @@ p {
   margin: 0;
 }
 
-body{
-    background-color: var(--BgDarkBlue);
+body {
+  background-color: var(--BgDarkBlue);
 }
 
 /* Mobile first Approach */
 
-.cardWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--BgDarkBlue);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--BgDarkBlue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card {
@@ -64,117 +64,185 @@ body{
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.cardimg{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+.cardimg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: var(--br-small);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.eyebox{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--Pr-Cyan);
+    border-radius: var(--br-small);
+    opacity: 0;
+    z-index: 1;
+}
+
+.eyebox .eyeimg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: var(--br-small);
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .cardimg img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--br-small);
+  width: 100%;
+  height: auto;
+  border-radius: var(--br-small);
 }
 
 .cardBody {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.cardBody h1{
-    font-family: var(--ff-outfit);
-    font-weight: var(--fw-bold);
-    font-size: 1.5rem;
-    color: var(--White);
+.cardBody h1 {
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+  color: var(--White);
 }
 
 .cardBody h2 {
-    font-family: var(--ff-outfit);
-    font-weight: var(--fw-light);
-    font-size: 1rem;
-    line-height: 2rem;
-    color: var(--Pr-SoftBlue);
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-light);
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--Pr-SoftBlue);
 }
 
-.timeBid{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-between;
-    font-family: var(--ff-outfit);
-    margin-bottom: .8rem;
+.timeBid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  font-family: var(--ff-outfit);
+  margin-bottom: 0.8rem;
 }
 
-.bid{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .5rem;
+.bid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
-.bid img{
-    width: .8rem;
-    height: 1.5rem;
+.bid img {
+  width: 0.8rem;
+  height: 1.5rem;
 }
 .bid p {
-    font-family: var(--ff-outfit);
-    font-weight: var(--fw-bold);
-    font-size: .98rem;
-    line-height: 2rem;
-    color: var(--Pr-Cyan);
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-bold);
+  font-size: 0.98rem;
+  line-height: 2rem;
+  color: var(--Pr-Cyan);
 }
 
 .time {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    gap: .5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
 }
 
-.time p{
-    font-family: var(--ff-outfit);
-    font-weight: var(--fw-regular);
-    font-size: 1rem;
-    line-height: 2rem;
-    color: var(--Pr-SoftBlue);
+.time p {
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--Pr-SoftBlue);
 }
 
-.card-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    font-family: var(--ff-outfit);
-    border-top: 2px solid hsl(215, 32%, 27%);
-    padding-top: 1rem;
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-family: var(--ff-outfit);
+  border-top: 2px solid hsl(215, 32%, 27%);
+  padding-top: 1rem;
 }
 
-.card-footer img{
-width: 11%;
-border-radius: 50%;
-background-color: var(--White);
-padding: 1px;
+.card-footer img {
+  width: 11%;
+  border-radius: 50%;
+  background-color: var(--White);
+  padding: 1px;
 }
 
 .footer-text {
-    font-family: var(--ff-outfit);
-    font-weight: var(--fw-regular);
-    font-size: .98rem;
-    line-height: 2rem;
-    color: var(--Pr-SoftBlue);
-  
+  font-family: var(--ff-outfit);
+  font-weight: var(--fw-regular);
+  font-size: 0.98rem;
+  line-height: 2rem;
+  color: var(--Pr-SoftBlue);
 }
 
 .footer-text a {
-    color: var(--White);
-    text-decoration: none;
+  color: var(--White);
+  text-decoration: none;
 }
 
+@media (hover: hover) {
+  .card {
+    box-shadow: -1rem 0.2rem 1rem rgba(0, 0, 0, 0.3);
+    transition: 250ms ease-in-out;
+  }
+
+  .card:hover {
+    box-shadow: -2rem 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  .cardBody,
+  .cardBody h1,
+  .card-footer,
+  .card-footer a,
+  .cardimg .nft,{
+    transition: 300ms ease-in-out;
+  }
+
+  .cardimg .nft {
+    transition: 350ms ease-in-out;
+  }
+
+  .cardimg:hover .nft {
+    transform: scale(1.03);
+  }
+  .eyebox{
+    transition: 800ms ease-in-out;
+}
+  .cardimg:hover .eyebox {
+    opacity: .5;
+  }
+
+  .cardBody:hover h1,
+  .card-footer:hover .footer-text {
+    cursor: pointer;
+  }
+
+  .cardBody:hover h1,
+  .card-footer:hover a {
+    color: var(--Pr-Cyan);
+  }
+
+}
 
 /* attribution section */
 footer {
@@ -192,7 +260,7 @@ footer {
   align-items: center;
   width: 100%;
   background-color: var(--White);
-  font-family: var(  --ff-outfit);
+  font-family: var(--ff-outfit);
   font-size: 0.8rem;
   padding-top: 0.2rem;
   text-align: center;
