@@ -1,0 +1,75 @@
+/* @import font Family */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* Primary Color Variables */
+  --Pr-SoftBlue: hsl(215, 51%, 70%);
+  --Pr-Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral Color Variables */
+  --VerydarkBlue: hsl(217, 54%, 11%);
+  --BgDarkBlue: hsl(216, 50%, 16%);
+  --LineDarkBlue(line): hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font Variables */
+  --ff-outfit: "Outfit", sans-serif;
+
+  /* Font Weight Variables */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+/* Mobile first Approach */
+
+
+
+
+
+
+/* attribution section */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.footerblk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  font-family: var(--font-family-base);
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  text-align: center;
+  transition: 300ms ease-in-out;
+}
+
+/* @Media for detecting hover capability if true adds hover anim */
+@media (hover: hover) {
+  footer:hover .footerblk {
+    transform: translateY(-0%);
+  }
+  .footerblk {
+    transform: translateY(100%);
+    text-align: center;
+    transition: 300ms ease-in-out;
+  }
+}
